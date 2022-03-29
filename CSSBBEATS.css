@@ -5,3 +5,19 @@
     background: #0B062C;
     font-size: 600%;
     }
+
+#Haut {
+    width: 110px;
+    position:absolute;left: 200px;top: 230px;
+}
+
+#Bas{
+    width: 110px;
+    position:absolute;left: 200px;top: 420px;
+
+}
+
+#ligne{
+    width: 1200px;
+    position:absolute;left: 180px;top: 100px;
+}
