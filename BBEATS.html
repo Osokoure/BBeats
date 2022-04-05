@@ -16,8 +16,11 @@
     <img src="Bas.png" id="Bas" alt="Bas" >
     <img src="ligne.png" id="ligne" alt="ligne">
     <audio id="Son1" controls style="display:none">
-        <source src="Son1.mp3" type="audio/mpeg"> 
+        <source src="Son1.mp3" type="audio/mpeg">
     </audio>  
+    <audio id="Son2" controls style="display:none">
+        <source src="Son2.mp3" type="audio/mpeg"> 
+    </audio>
 
 
   <script>
@@ -25,7 +28,6 @@
 
     function Z(evt) {
         if (evt.keyCode == "90") {
-	    alert("Z");
             document.getElementById('Son1').play();
         }
     }
@@ -36,7 +38,7 @@
 
     function S(evt) {
         if (evt.keyCode == "83") {
-            alert("S");
+            document.getElementById('Son2').play();
         }
     }
     </script>
@@ -46,7 +48,7 @@
 
     function Haut(evt) {
         if (evt.keyCode == "38") {
-            alert("Flèche haut");
+            document.getElementById('Son1').play();
         }
     }
     </script>
@@ -56,7 +58,7 @@
 
     function Bas(evt) {
         if (evt.keyCode == "40") {
-            alert("Flèche bas");
+            document.getElementById('Son2').play();
         }
     }
     </script>
@@ -66,3 +68,4 @@
 
 </body>
 </html>
+
