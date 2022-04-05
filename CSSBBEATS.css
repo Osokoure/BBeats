@@ -30,3 +30,13 @@ body {
     width: 1500px;
     position:absolute;left: 80px;top: 180px;
 }
+
+#PleinEcran{
+    background-color: transparent;
+    border: 0px;
+    position:absolute;left:1320px;top:3px;
+}
+
+#PleinEcranImg{
+    width: 40px;
+}
