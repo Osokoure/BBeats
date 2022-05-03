@@ -21,6 +21,14 @@ body {
 
 }
 
+#HautMouv{
+    width:100px;
+}
+
+#BasMouv{
+    width:100px;
+}
+
 #ligneHaut{
     width: 1500px;
     position:absolute;left: 80px;top: 10px;
