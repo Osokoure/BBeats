@@ -29,6 +29,38 @@ body {
     width:100px;
 }
 
+#clavierZ{
+    width: 35px;
+    position:absolute;left: 20px;top: 280px;
+}
+
+#ou1{
+    position:absolute;left: 70px;top: 280px;
+    color: #FFFFFF;
+    font-family: Bahnschrift;
+}
+
+#clavierHaut{
+    width: 35px;
+    position:absolute;left: 100px;top: 280px;
+}
+
+#clavierS{
+    width: 35px;
+    position:absolute;left: 20px;top: 450px;
+}
+
+#ou2{
+    position:absolute;left: 70px;top: 450px;
+    color: #FFFFFF;
+    font-family: Bahnschrift;
+}
+
+#clavierBas{
+    width: 35px;
+    position:absolute;left: 100px;top: 450px;
+}
+
 #ligneHaut{
     width: 1500px;
     position:absolute;left: 80px;top: 10px;
