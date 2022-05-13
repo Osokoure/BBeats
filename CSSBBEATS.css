@@ -34,6 +34,8 @@ body {
   position:absolute;left: 20px;top: 280px;
 }
 
+
+
 #ou1{
   position:absolute;left: 70px;top: 280px;
   color: #FFFFFF;
@@ -167,4 +169,37 @@ body {
     width:150px;
     line-height:50px;
     border-radius: 12px;
+}
+
+.time {
+  font-size: 100px;
+  text-align: center;
+}
+
+#Score{
+  font-family: Bahnschrift;
+  color: #FFFFFF;
+  font-size: 300%;
+  position:absolute;left: 20px;top: -10px;
+}
+
+#Score1{
+  font-family: Bahnschrift;
+  color: #FFFFFF;
+  font-size: 200%;
+  position:absolute;left: 20px;top: -30px;
+}
+
+#ScoreMax{
+  font-family: Bahnschrift;
+  color: #FFFFFF;
+  font-size: 200%;
+  position:absolute;left: 150px;top: -30px;
+}
+
+#ScoreMax1{
+  font-family: Bahnschrift;
+  color: #FFFFFF;
+  font-size: 200%;
+  position:absolute;left: 150px;top: 10px;
 }
