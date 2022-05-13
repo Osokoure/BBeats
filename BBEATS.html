@@ -10,8 +10,6 @@
     <body style="background-color:#0B062C;">
     <center><div id="Titre">BBeats</div></center>
 
-   
-   
     <img src="Haut.png" id="Haut" alt="Haut" >
     <img src="Bas.png" id="Bas" alt="Bas" >
     <img src="clavierZ.png" id="clavierZ" alt="clavierZ" >
@@ -22,18 +20,28 @@
     <img src="clavierBas.png" id="clavierBas" alt="clavierBas">
     <img src="ligne.png" id="ligneHaut" alt="ligneH">
     <img src="ligne.png" id="ligneBas" alt="ligneB">
-    <img src="HautMouv.png" id="img">
-    <img src="BasMouv.png" id="img2">
+    <img src="HautMouv.png" id="img" alt="hautmouv">
+    <img src="BasMouv.png" id="img2" alt="basmouv">
     <audio id="Son1" controls style="display:none">
         <source src="Son1.mp3" type="audio/mpeg">
     </audio>  
     <audio id="Son2" controls style="display:none">
         <source src="Son2.mp3" type="audio/mpeg"> 
     </audio>
-    <button type="button" id="m1" onclick="toggle_text()">Musique 1</button>
-    <button type="button" id="m2" onclick="toggle_text()">Musique 2</button>
-    
-    
+    <audio id="Musique1" controls style="display:none">
+      <source src="terraria.mp3" type="audio/mpeg"> 
+  </audio>
+  <audio id="Musique2" controls style="display:none">
+    <source src="Son2.mp3" type="audio/mpeg"> 
+  </audio>
+
+
+
+
+    <button type="button" id="m1" onclick="musique1()"  onclick="toggle_text()">Musique 1</button>
+    <button type="button" id="m2" onclick="musique2()">Musique 2</button>
+
+    <div id="timer" class="time"></div>
     
     <button id="PleinEcran" type="button" title="Entrer/Sortir du mode plein écran"><img src="fullscreen.png" id="PleinEcranImg"/></button>
     <script>
@@ -67,9 +75,7 @@
         document.getElementById("PleinEcran").addEventListener("click", function() {
           toggleFullscreen();
         });
-        </script>
-    
-   <script>
+
     window.addEventListener("keydown", Z, false);
 
     function Z(evt) {
@@ -84,12 +90,6 @@
     }
   }
     
-    </script>
-    <script>
-
-    </script>
-   
- <script>
     window.addEventListener("keydown", S, false);
 
     function S(evt) {
@@ -102,9 +102,7 @@
         }
       }
     }
-    </script>
 
-<script>
     window.addEventListener("keydown", Haut, false);
 
     function Haut(evt) {
@@ -118,9 +116,7 @@
             }
         }
     }
-    </script>
 
-<script>
     window.addEventListener("keydown", Bas, false);
 
     function Bas(evt) {
@@ -134,10 +130,45 @@
         }
         }
     }
-    </script>
 
+  function musique1() {
+    document.getElementById('Musique1').play();
+    const departMinutes = 0
+    const departSecondes = 48
+  let temps = departMinutes * 60
 
+  
+  const timerElement = document.getElementById("timer")
+  
+  setInterval(() => {
+    let minutes = parseInt(temps / 60, 10)
+    let secondes = parseInt(temps % 60, 10)
+  
+    minutes = minutes < 10 ? "0" + minutes : minutes
+    secondes = secondes < 10 ? "0" + secondes : secondes
+  
+    timerElement.innerText = `${minutes}:${secondes}`
+    temps = temps <= 0 ? 0 : temps - 1
+  }, 1000)
+  }
 
+  function musique2() {
+    document.getElementById('Musique2').play();
+  }
+</script>
+
+<script type="text/javascript">
+  var Score = 0;
+</script>
+
+<p id="Score">
+<script type="text/javascript">
+document.write(Score)
+</script>
+</p>
+
+<p id="Score1">Score</p>
+<p id="ScoreMax">Score max</p>
+<p id="ScoreMax1">[Nb DE NOTES]</p>
 </body>
 </html>
-
