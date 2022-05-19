@@ -17,7 +17,7 @@ body {
 
 #Bas{
   width: 100px;
-  position:absolute;left: 200px;top: 420px;
+  position:absolute;left: 200px;top: 440px;
 
 }
 
@@ -81,43 +81,6 @@ body {
 
 #PleinEcranImg{
   width: 40px;
-}
-#img {
-  animation-duration: 3s;
-  animation-name: slide;
-  animation-iteration-count: infinite;
-  position:absolute;left: 120px;top: 260px;
-  ;
-}
-@keyframes slide {
-  from {
-    margin-left: 100%;
-    width: 5%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 5%;
-  }
-}
-
-#img2 {
-  animation-duration: 3s;
-  animation-name: slide;
-  animation-iteration-count: infinite;
-  position:absolute;left: 120px;top: 450px;
-  ;
-}
-@keyframes slide {
-  from {
-    margin-left: 100%;
-    width: 5%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 5%;
-  }
 }
 
 #m1 {
@@ -206,3 +169,84 @@ body {
   font-size: 200%;
   position:absolute;left: 150px;top: 10px;
 }
+
+
+#AnimHaut {
+  animation-duration: 2s;
+  animation-name: slide;
+  animation-iteration-count: infinite;
+  position:absolute;left: 120px;top: 260px;
+  animation-timing-function: linear;
+}
+@keyframes slide {
+  from {
+    margin-left: 100%;
+    width: 5%;
+  }
+
+  to {
+    margin-left: 7%;
+    width: 5%;
+  }
+}
+
+
+#AnimHauta {
+  animation-delay: 250ms;
+  animation-duration: 2s;
+  animation-name: slide;
+  animation-iteration-count: infinite;
+  position:absolute;left: 120px;top: 260px;
+  animation-timing-function: linear;
+}
+@keyframes slide {
+  from {
+    margin-left: 100%;
+    width: 5%;
+  }
+
+  to {
+    margin-left: 7%;
+    width: 5%;
+  }
+}
+
+
+#AnimBas {
+  animation-duration: 3s;
+  animation-name: slide;
+  animation-iteration-count: infinite;
+  position:absolute;left: 120px;top: 450px;
+  animation-timing-function: linear;
+}
+@keyframes slide {
+  from {
+    margin-left: 100%;
+    width: 5%;
+  }
+
+  to {
+    margin-left: 7%;
+    width: 5%;
+  }
+}
+
+#AnimBasa {
+  animation-delay: 250ms;
+  animation-duration: 3s;
+  animation-name: slide;
+  animation-iteration-count: infinite;
+  position:absolute;left: 120px;top: 450px;
+  animation-timing-function: linear;
+}
+@keyframes slide {
+  from {
+    margin-left: 100%;
+    width: 5%;
+  }
+
+  to {
+    margin-left: 7%;
+    width: 5%;
+  }
+}  
