@@ -20,8 +20,15 @@
     <img src="clavierBas.png" id="clavierBas" alt="clavierBas">
     <img src="ligne.png" id="ligneHaut" alt="ligneH">
     <img src="ligne.png" id="ligneBas" alt="ligneB">
-    <img src="HautMouv.png" id="img" alt="hautmouv">
-    <img src="BasMouv.png" id="img2" alt="basmouv">
+    
+    
+    <img src="HautMouv.png" id="AnimHaut" alt="hautmouv">
+    <img src="HautMouv.png" id="AnimHauta" alt="hautmouv">
+    <img src="BasMouv.png" id="AnimBas" alt="basmouv">
+    <img src="BasMouv.png" id="AnimBasa" alt="basmouv"> 
+    
+   
+    
     <audio id="Son1" controls style="display:none">
         <source src="Son1.mp3" type="audio/mpeg">
     </audio>  
@@ -39,7 +46,7 @@
 
 
     <button type="button" id="m1" onclick="musique1()"  onclick="toggle_text()">Musique 1</button>
-    <button type="button" id="m2" onclick="musique2()">Musique 2</button>
+    <!-- <button type="button" id="m2" onclick="musique2()">Musique 2</button>         Useless pour le moment-->
 
     <div id="timer" class="time"></div>
     
@@ -133,7 +140,7 @@
 
   function musique1() {
     document.getElementById('Musique1').play();
-    const departMinutes = 0
+    const departMinutes = 0.81
   let temps = departMinutes * 60
 
   
