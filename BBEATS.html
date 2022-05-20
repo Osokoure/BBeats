@@ -45,9 +45,9 @@
 
 
 
-    <button type="button" id="m1" onclick="musique1()"  onclick="toggle_text()">Musique 1</button>
-    <!-- <button type="button" id="m2" onclick="musique2()">Musique 2</button>         Useless pour le moment-->
-    <a href=AcceuilBBeats.html><input class="bouton2" type="button" value="Accueil"></a>
+
+    <button type="button" id="m1" onclick="musique1()" onclick="Z1(evt)" onclick="Haut1(evt)" onclick="S1(evt)" onclick="Bas1(evt)">Musique 1</button>
+    <a href=AccueilBBeats.html><input class="bouton2" type="button" value="Accueil"></a>
 
     <div id="timer" class="time"></div>
     
@@ -94,8 +94,7 @@
             function re() {
             document.getElementById("Haut").src="Haut.png";
             }
-           
-    }
+}
   }
     
     window.addEventListener("keydown", S, false);
@@ -136,46 +135,82 @@
             function re2() {
             document.getElementById("Bas").src="Bas.png";
         }
-        }
     }
-
+  }
   function musique1() {
     document.getElementById('Musique1').play();
-    const departMinutes = 0.81
-  let temps = departMinutes * 60
+    const timer= document.getElementById("timer")
+    let time=0
+    setInterval(function chrono() {
+      parseInt(time += 1)
+      timer.innerText = `${time}`
+    }
+    ,100)
+  }    
+ 
 
-  
-  const timerElement = document.getElementById("timer")
-  
-  setInterval(() => {
-    let minutes = parseInt(temps / 60, 10)
-    let secondes = parseInt(temps % 60, 10)
-  
-    minutes = minutes < 10 ? "0" + minutes : minutes
-    secondes = secondes < 10 ? "0" + secondes : secondes
-  
-    timerElement.innerText = `${minutes}:${secondes}`
-    temps = temps <= 0 ? 0 : temps - 1
-  }, 1000)
-  }
 
   function musique2() {
     document.getElementById('Musique2').play();
   }
+
+
 </script>
 
-<script type="text/javascript">
-  var Score = 0;
-</script>
+<div id="score" class="Score"></div>
+<script>
+const s1 = document.getElementById("score")
+var score= 0;
+s1.innerText = `${score}`
+window.addEventListener("keydown", Z1, false);
 
-<p id="Score">
-<script type="text/javascript">
-document.write(Score)
-</script>
-</p>
 
+function Z1(evt){
+    if (evt.keyCode == "90") {
+      if (timer.innerText>17 && timer.innerText<20) {
+      ++score
+      s1.innerText = `${score}`
+      }
+      else {
+      s1.innerText = `${score}`
+      }
+    }
+}
+
+window.addEventListener("keydown", Haut1, false);
+function Haut1(evt){
+    if (evt.keyCode == "38") {
+      if (timer.innerText>17 && timer.innerText<20) {
+      ++score
+      s1.innerText = `${score}`
+      }
+    }
+}
+
+window.addEventListener("keydown", S1, false);
+function S1(evt){
+    if (evt.keyCode == "83") {
+      if (timer.innerText>17 && timer.innerText<20) {
+      ++score
+      s1.innerText = `${score}`
+      }
+    }
+}
+
+window.addEventListener("keydown", Bas1, false);
+function Bas1(evt){
+    if (evt.keyCode == "40") {
+      if (timer.innerText>17 && timer.innerText<20) {
+      ++score
+      s1.innerText = `${score}`
+      }
+    }
+}
+
+
+</script>
 <p id="Score1">Score</p>
 <p id="ScoreMax">Score max</p>
-<p id="ScoreMax1">[Nb DE NOTES]</p>
+<p id="ScoreMax1">18</p>
 </body>
 </html>
